@@ -1,0 +1,29 @@
+Étapes de configuration
+Créer le fichier de configuration Nginx :
+sudo nano /etc/nginx/sites-available/egapro
+
+Coller le contenu du fichier de configuration Nginx.
+Conf du reverse proxy.txt
+
+Activer le site en créant un lien symbolique dans le dossier sites-enabled :
+sudo ln -s /etc/nginx/sites-available/egapro /etc/nginx/sites-enabled/
+
+
+Tester la configuration Nginx :
+sudo nginx -t
+
+Redémarrer Nginx pour appliquer les modifications :
+sudo systemctl restart nginx
+
+
+Explication de la configuration
+
+server : Définit un bloc de serveur Nginx écoutant sur le port 80 pour le domaine votre_domaine.com.
+
+location /rest : Redirige toutes les requêtes sous /rest vers le service REST sur le port 5000.
+location /grpc : Redirige toutes les requêtes sous /grpc vers le service gRPC sur le port 50051.
+location /soap : Redirige toutes les requêtes sous /soap vers le service SOAP sur le port 8000.
+
+proxy_set_header : Définit les en-têtes HTTP pour passer les informations du client au serveur backend.
+Remplacez votre_domaine.com par le domaine ou l'adresse IP de votre serveur.
+
