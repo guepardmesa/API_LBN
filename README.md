@@ -1,7 +1,7 @@
 
 # Schéma UML : 
 
-.. image:: img/UML.jpg
+![Diagramme UML](chemin/vers/image.jpg)
 
 Ce diagramme montre l'intéractiin entre un client, un proxy inverse (Nginx) et divers services (RPC, REST, SOAP) et une base de données commune.
 
