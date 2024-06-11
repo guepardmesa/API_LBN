@@ -25,16 +25,16 @@ Composants
 * Le service RPC renvoie la réponse au reverse proxy
 
 4. Requête REST
-*Le proxy inverse transmet une requête au service REST.
-*Le service REST envoie une requête SIREN à la base de données commune.
-*La base de données retourne la réponse au service REST.
-*Le service REST renvoie la réponse au reverse proxy.
+* Le proxy inverse transmet une requête au service REST.
+* Le service REST envoie une requête SIREN à la base de données commune.
+* La base de données retourne la réponse au service REST.
+* Le service REST renvoie la réponse au reverse proxy.
 
 5. Requête SOAP
-*Le proxy inverse transmet une requête au service SOAP.
-*Le service SOAP envoie une requête SIREN à la base de données commune.
-*La base de données retourne la réponse au service SOAP.
-*Le service SOAP renvoie la réponse au proxy inverse.
+* Le proxy inverse transmet une requête au service SOAP.
+* Le service SOAP envoie une requête SIREN à la base de données commune.
+* La base de données retourne la réponse au service SOAP.
+* Le service SOAP renvoie la réponse au proxy inverse.
 
 6. Réponse finale au client : le reverse proxy compile les réponses reçues des services et envoie la réponse finale au client 
 
