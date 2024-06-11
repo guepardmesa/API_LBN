@@ -7,12 +7,12 @@ Ce diagramme montre l'intéractiin entre un client, un proxy inverse (Nginx) et 
 
 Composants 
 ==============
-1. Client :
-2. Reverse Proxy : serveur quu gère les requêtes des clients et les transmet au services approprié
-3. Service RPC : permet de communiquer avce la base de données
-4. Service REST : Permet la communication
-5. Service SOAP : utilise le protocole SOAP pour les opérations
-6. Base de données communes : base de données centralusée qui stocke les données accessibles par tous les services
+   1. Client :
+   2. Reverse Proxy : serveur quu gère les requêtes des clients et les transmet au services approprié
+   3. Service RPC : permet de communiquer avce la base de données
+   4 . Service REST : Permet la communication
+   5. Service SOAP : utilise le protocole SOAP pour les opérations
+   6. Base de données communes : base de données centralusée qui stocke les données accessibles par tous les services
 
    Séquence des événements
    ========================
