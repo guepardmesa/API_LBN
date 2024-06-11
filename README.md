@@ -25,18 +25,58 @@ Composants
 * Le service RPC renvoie la réponse au reverse proxy
 
 4. Requête REST
-*Le proxy inverse transmet une requête au service REST.
-*Le service REST envoie une requête SIREN à la base de données commune.
-*La base de données retourne la réponse au service REST.
-*Le service REST renvoie la réponse au reverse proxy.
+* Le proxy inverse transmet une requête au service REST.
+* Le service REST envoie une requête SIREN à la base de données commune.
+* La base de données retourne la réponse au service REST.
+* Le service REST renvoie la réponse au reverse proxy.
 
 5. Requête SOAP
-*Le proxy inverse transmet une requête au service SOAP.
-*Le service SOAP envoie une requête SIREN à la base de données commune.
-*La base de données retourne la réponse au service SOAP.
-*Le service SOAP renvoie la réponse au proxy inverse.
+* Le proxy inverse transmet une requête au service SOAP.
+* Le service SOAP envoie une requête SIREN à la base de données commune.
+* La base de données retourne la réponse au service SOAP.
+* Le service SOAP renvoie la réponse au proxy inverse.
 
-6. Réponse finale au client : le reverse proxy compile les réponses reçues des services et envoie la réponse finale au client 
+6. Réponse finale au client : le reverse proxy compile les réponses reçues des services et envoie la réponse finale au client
+
+# Guide utilisation
+
+Cloner le dépôt GitHub
+--------------------------
+
+* git clone [https://github.com/votre-utilisateur/votre-repo.git](https://github.com/guepardmesa/API_LBN)
+
+* cd votre-repo
+
+Installer les dépendances
+----------------------------
+
+* Pour le service REST, utilisez Flask :
+pip install flask
+
+* Pour le service SOAP, utilisez Spyne :
+pip install spyne
+
+
+Configurer la base de données
+------------------------------
+
+* Créez une base de données SQLite et ajoutez les données nécessaires.
+
+Lancer les services
+-------------------
+
+* Service RPC : python rpc_server.py
+
+* Service REST : python rest_api.py
+
+* Service SOAP : python soap_server.py
+
+Configurer et lancer Nginx
+---------------------------
+
+Modifiez le fichier de configuration Nginx pour qu'il corresponde à votre domaine et à vos chemins de service.
+Relancez Nginx pour appliquer les modifications :
+sudo systemctl restart nginx
 
 
 
