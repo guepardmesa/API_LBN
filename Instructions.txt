@@ -1,0 +1,21 @@
+Instructions pour exécuter chaque service :
+
+Importer les données :
+python data_import.py
+
+Démarrer le service RPC :
+python rpc_server.py
+
+
+Démarrer l'API REST :
+python rest_api.py
+
+Démarrer l'API SOAP :
+python soap_server.py
+
+
+Explications :
+data_import.py : Ce script lit les données à partir du fichier CSV et les insère dans une base de données SQLite.
+rpc_server.py : Ce fichier crée un serveur RPC qui permet de récupérer les données en utilisant le SIREN.
+rest_api.py : Ce fichier crée une API RESTful en utilisant Flask pour récupérer les données via des requêtes HTTP.
+soap_server.py : Ce fichier crée un service SOAP pour récupérer les données en utilisant le protocole SOAP.
