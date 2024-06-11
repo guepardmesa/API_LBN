@@ -43,7 +43,7 @@ Composants
 Cloner le dépôt GitHub
 --------------------------
 
-* git clone [https://github.com/votre-utilisateur/votre-repo.git](https://github.com/guepardmesa/API_LBN)
+* git clone [Lien vers le dépôt](https://github.com/guepardmesa/API_LBN)
 
 * cd votre-repo
 
