@@ -1,7 +1,7 @@
 
 # Schéma UML : 
 
-![Diagramme UML](chemin/vers/image.jpg)
+![Diagramme UML](img/UML.jpg)
 
 Ce diagramme montre l'intéractiin entre un client, un proxy inverse (Nginx) et divers services (RPC, REST, SOAP) et une base de données commune.
 
@@ -16,15 +16,15 @@ Composants
 
    Séquence des événements
    ========================
-   1. Requête initiale du client : le client envoie une reqiuête au revserse proxy
-   2. Routage du reverse Proxy : il transmet la requête à l'un des services disponibles en foncton de la nature de la requête
-   3. Requête RPC :
+1. Requête initiale du client : le client envoie une reqiuête au revserse proxy
+2. Routage du reverse Proxy : il transmet la requête à l'un des services disponibles en foncton de la nature de la requête
+3. Requête RPC :
 * Revrese proxy transmet une requête au service RPC
 * Service RPC envoie une requête SIREN à la base de données commune
 * La bse de données retourne la réponse au service RPC
 * Le service RPC renvoie la réponse au reverse proxy
 
-  4. Requête REST
+4. Requête REST
 *Le proxy inverse transmet une requête au service REST.
 *Le service REST envoie une requête SIREN à la base de données commune.
 *La base de données retourne la réponse au service REST.
